@@ -1,0 +1,297 @@
+/* ===== WARNA DASAR ===== */
+:root {
+  --red-main: #d32f2f;      
+  /* warna merah utama aplikasi (menu aktif, tombol utama, aksen penting) */
+
+  --red-soft: #8f7471;     
+  /* warna merah lembut untuk background pendukung */
+
+  --red-dark: #b71c1c;
+  /* merah lebih gelap untuk hover / penekanan */
+
+  --gray-bg: #a91111;
+  /* warna background utama halaman */
+
+  --green: #03cc17;
+  /* warna status sukses / aktif */
+
+  --yellow: #f4c004;
+  /* warna status peringatan / pending */
+
+  --pink: #f4b1b1;
+  /* warna aksen tambahan */
+
+  --white: #ffffff;
+  /* warna putih untuk card / sidebar */
+
+  --black: #000000;
+  /* warna hitam untuk teks utama */
+}
+
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  /* menghilangkan margin default browser */
+
+  font-family: Arial, sans-serif;
+  /* font utama seluruh halaman */
+
+  background: var(--gray-bg);
+  /* background halaman menggunakan variabel */
+
+  color: #333;
+  /* warna teks utama agar tidak terlalu hitam */
+}
+
+
+/* ===== LAYOUT ===== */
+.wrap {
+  display: grid;
+  /* menggunakan CSS Grid untuk layout utama */
+
+  grid-template-columns: 90px 1fr 320px;
+  /* 90px = sidebar kiri
+     1fr  = konten utama (fleksibel)
+     320px = panel kanan */
+
+  gap: 20px;
+  /* jarak antar kolom */
+
+  padding: 20px;
+  /* jarak layout ke tepi layar */
+}
+
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: var(--white);
+  /* background sidebar putih */
+
+  border-radius: 16px;
+  /* sudut sidebar membulat */
+
+  padding: 20px 10px;
+  /* jarak isi sidebar ke tepi */
+
+  display: flex;
+  /* menggunakan flexbox */
+
+  flex-direction: column;
+  /* item disusun vertikal */
+
+  align-items: center;
+  /* item rata tengah horizontal */
+}
+
+
+.logo-img {
+  width: 48px;
+  /* ukuran logo sidebar */
+
+  margin-bottom: 30px;
+  /* jarak logo ke menu */
+}
+
+
+/* MENU ICON */
+.menu-icons {
+  display: flex;
+  /* flexbox untuk daftar ikon */
+
+  flex-direction: column;
+  /* ikon disusun ke bawah */
+
+  gap: 22px;
+  /* jarak antar ikon menu */
+}
+
+
+  .icon {
+  width: 26px;
+  /* ukuran ikon SVG */
+
+  fill: rgb(255, 255, 255);
+  /* warna isi ikon SVG */
+}
+
+
+.menu-item {
+  width: 40px;
+  /* area klik ikon */
+
+  height: 40px;
+
+  border-radius: 8px;
+  /* sudut ikon membulat */
+
+  display: flex;
+  /* flexbox */
+
+  align-items: center;
+  /* ikon rata tengah vertikal */
+
+  justify-content: center;
+  /* ikon rata tengah horizontal */
+}
+
+
+.menu-item.active {
+  background: var(--red-main);
+  /* background merah untuk menu yang sedang aktif */
+}
+
+
+.menu-item img {
+  width: 22px;
+  /* ukuran ikon gambar di dalam menu sidebar */
+}
+
+
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  display: flex;
+  /* flexbox untuk menyusun konten utama */
+
+  flex-direction: column;
+  /* konten disusun vertikal */
+
+  gap: 20px;
+  /* jarak antar card / section */
+}
+
+
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--red-main);
+}
+
+/* ===== BUYER INFO ===== */
+.info-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== ITEM ===== */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f4b1b1
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.desc {
+  flex: 1;
+}
+
+.desc h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.desc p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #777;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--red-main);
+}
+
+/* ===== PRICE TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 6px 0;
+}
+
+table tr.total td {
+  font-weight: bold;
+  color: var(--red-main);
+}
+
+/* ===== RIGHT COLUMN ===== */
+.right .card {
+  margin-bottom: 20px;
+}
+
+/* ===== ORDER STATUS ===== */
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.timeline .done {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+.timeline .current {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+.btn-main {
+  background: var(--red-main);
+  color: #f4b1b1;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: var(--red-soft);
+  color: var(--red-main);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}

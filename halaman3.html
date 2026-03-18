@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Trip | Penjelajah</title>
+    <link rel="stylesheet" href="halaman3.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-mini">
+        <div class="sidebar-menu">
+
+            <li class="menu-item active">
+  
+
+
+            <div class="sidebar-logo">
+                <img src="traveling.png" alt="Logo" class="logo-img">
+            </div>
+
+            <ul class="main-menu">
+                <li>
+                    <a href="dashboard.html" class="sidebar-link">
+                        <img src="table.png" alt="Dashboard">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link">
+                        <img src="bike.png" alt="Pesanan">
+                    </a>
+                </li>
+                <li class="active">
+    <a href="halaman3.html" class="sidebar-link">
+        <div class="icon-wrapper">
+            <img src="traveling.png" alt="Create Trip">
+        </div>
+    </a>
+</li>
+
+                <li>
+                    <a href="#" class="sidebar-link">
+                        <img src="settings.png" alt="Pengaturan">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1 class="page-title">Penjelajah Set-Up</h1>
+                <span class="breadcrumb">/ Create New Trip</span>
+            </div>
+            <div class="header-right">
+                <img src="bell.png" alt="Notifikasi" class="notification-img">
+                <img src="Logo Titipkeun-U.jpeg" alt="Profile" class="profile-img">
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content-area">
+
+            <!-- FORM -->
+            <div class="form-card">
+                <div class="card-header">
+                    <h2>Buat Perjalanan Baru</h2>
+                    <small>Isi detail perjalanan Anda.</small>
+                </div>
+
+                <form>
+                    <div class="form-section">
+                        <h3>1. Detail Dasar</h3>
+
+                        <label for="trip-name">Nama Perjalanan / Destinasi</label>
+                        <input type="text" id="trip-name" placeholder="Contoh: Gedung FKS ke Gedung FIT">
+
+                        <label for="trip-dates">Periode Perjalanan</label>
+                        <input type="text" id="trip-dates" placeholder="15/11/2025 - 20/11/2025">
+                    </div>
+
+                    <div class="form-section">
+                        <h3>2. Lokasi</h3>
+
+                        <div class="location-group">
+                            <div>
+                                <label for="loc-asal">Lokasi Asal</label>
+                                <input type="text" id="loc-asal" placeholder="Bojongsoang, Indonesia">
+                            </div>
+
+                            <div>
+                                <label for="loc-tujuan">Lokasi Tujuan</label>
+                                <input type="text" id="loc-tujuan" placeholder="Bandung, Indonesia">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>3. Detail Tambahan</h3>
+                        <label>Kategori yang Diterima</label>
+
+                        <div class="category-checkboxes">
+                            <label><input type="checkbox" checked> Makanan & Minuman</label>
+                            <label><input type="checkbox"> Pakaian & Aksesori</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>4. Foto / Bukti Perjalanan</h3>
+                        <div class="image-upload-area">
+                            <img src="upload.png" alt="Upload" class="upload-placeholder-img">
+                            <p>Unggah foto atau deskripsi perjalanan Anda.</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Simpan Perjalanan
+                    </button>
+                </form>
+            </div>
+
+            <!-- SIDE PANEL -->
+            <div class="side-panel">
+
+                <div class="card">
+    <h3>My Trips (Aktif)</h3>
+
+    <div class="trip-item-active active-red">
+        <p>Trip ke Gedung FIT</p>
+        <small>15 - 20 Nov</small>
+        <div class="order-info">
+            <img src="package.png" class="icon-small-list" alt="Orders">
+            <span>5 Orders</span>
+        </div>
+    </div>
+
+    <div class="trip-item-active">
+        <p>Trip ke Gedung TULT</p>
+        <small>01 - 07 Des</small>
+        <div class="order-info">
+            <img src="package.png" class="icon-small-list" alt="Orders">
+            <span>3 Orders</span>
+        </div>
+    </div>
+</div>
+
+
+                    
+
+                <div class="card">
+                    <h3>Comments</h3>
+                    <div class="no-comments-area">
+                        <img src="communication.png" class="icon-large">
+                        <p>No comments yet.<br>Press (+) to add comments.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        
+
+
+        <!-- FOOTER -->
+        <footer class="footer-dashboard">
+            <span>Kebijakan Privasi | Ketentuan Layanan | Dukungan</span>
+            <p>© 2025 Penjelajah. Semua hak dilindungi.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

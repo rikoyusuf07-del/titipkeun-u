@@ -1,0 +1,617 @@
+:root {
+    --primary-color: #c80000; /* warna utama aplikasi (aksi, menu aktif, aksen penting) */
+    --pink: #ffffff; /* warna background utama halaman */
+    --text-hitam: #000000; /* warna teks utama */
+    --light-text: #000000; /* warna teks sekunder / teks kecil */
+    --border-color: #f2f2f2; /* warna garis pembatas */
+    --bg-light: #ffffff; /* background putih untuk card dan sidebar */
+    --bg-dark: #e3e3e3; /* background abu untuk hover */
+    --bg-maroon: #b0000006; /* warna maroon transparan sebagai aksen */
+}
+
+/* Reset dan Basis */
+body {
+    margin: 0; /* menghilangkan margin default browser */
+    font-family: 'Arial', sans-serif; /* font default seluruh aplikasi */
+    background: var(--pink); /* background utama halaman */
+    color: var(--text-hitam); /* warna teks default */
+}
+
+.dashboard-container {
+    display: flex; /* membuat sidebar dan konten sejajar horizontal */
+    min-height: 100vh; /* tinggi minimal satu layar penuh */
+}
+
+/* --- Sidebar Styling (Baru) --- */
+.sidebar-new {
+    width: 50px; /* lebar sidebar mini */
+    background: var(--bg-light); /* background sidebar */
+    border-right: 1px solid var(--border-color); /* garis pemisah sidebar dan konten */
+    display: flex; /* flexbox untuk atur isi */
+    flex-direction: column; /* isi sidebar disusun vertikal */
+    justify-content: space-between; /* memberi jarak atas dan bawah */
+    padding: 20px 0; /* jarak dalam sidebar */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.02); /* bayangan halus */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: var(--white); /* background sidebar utama */
+  border-radius: 16px; /* sudut sidebar membulat */
+  padding: 20px 15px; /* jarak isi ke tepi */
+  display: flex; /* flexbox */
+  flex-direction: column; /* isi ke bawah */
+  align-items: center; /* ikon rata tengah */
+}
+
+.logo-img {
+  width: 48px; /* ukuran logo */
+  margin-bottom: 30px; /* jarak logo ke menu */
+}
+
+/* MENU ICON */
+.menu-icons {
+  display: flex; /* flexbox */
+  flex-direction: column; /* ikon ke bawah */
+  gap: 22px; /* jarak antar ikon */
+}
+
+.icon {
+  width: 26px; /* ukuran ikon */
+  fill: rgb(0, 0, 0); /* warna ikon svg */
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  display: flex; /* flexbox */
+  flex-direction: column; /* konten vertikal */
+  gap: 15px; /* jarak antar section */
+}
+
+.sidebar-menu {
+    display: flex; /* flexbox menu */
+    flex-direction: column; /* menu ke bawah */
+    align-items: center; /* menu di tengah sidebar */
+}
+
+.sidebar-logo {
+    margin-bottom: 30px; /* jarak logo ke menu */
+}
+
+.sidebar-logo img {
+    width: 28px; /* ukuran logo */
+    height: 28px;
+    object-fit: contain; /* gambar tidak gepeng */
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* filter untuk mendekati warna primary */
+}
+
+.main-menu {
+    list-style: none; /* menghilangkan bullet list */
+    padding: 0; /* hapus padding default */
+    margin: 0; /* hapus margin default */
+}
+
+.main-menu li {
+    padding: 12px; /* memperbesar area klik */
+    margin-bottom: 15px; /* jarak antar menu */
+    cursor: pointer; /* tanda bisa diklik */
+    border-radius: 8px; /* sudut membulat */
+    transition: background 0.2s; /* animasi hover halus */
+    text-align: center; /* ikon di tengah */
+}
+
+/* Menghilangkan padding li untuk tautan */
+.main-menu li .sidebar-link {
+    display: block; /* link memenuhi area */
+    padding: 0; /* padding diatur dari li */
+}
+
+/* Styling ikon menu */
+.main-menu li img {
+    width: 18px; /* ukuran ikon */
+    height: 18px;
+    object-fit: contain; /* ikon tidak gepeng */
+    filter: grayscale(100%) brightness(50%); /* ikon abu */
+    transition: filter 0.2s; /* animasi perubahan warna */
+}
+
+/* Hover menu */
+.main-menu li:hover {
+    background: var(--bg-dark); /* background saat hover */
+}
+
+.main-menu li:hover img,
+.main-menu li:hover .sidebar-link img {
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* ikon berubah warna primary */
+}
+
+/* Menu aktif */
+.main-menu li.active {
+    background: var(--primary-color); /* background menu aktif */
+}
+
+.main-menu li.active img {
+    filter: brightness(0) invert(1); /* ikon jadi putih */
+}
+
+/* --- Content Styling --- */
+.content-new {
+    flex-grow: 1; /* konten mengisi sisa layar */
+    padding: 20px 30px; /* jarak konten ke tepi */
+    max-width: calc(100% - 65px); /* menyesuaikan lebar sidebar */
+}
+
+/* --- Top Header --- */
+.top-header-new {
+    display: flex; /* flexbox */
+    justify-content: space-between; /* kiri dan kanan */
+    align-items: center; /* rata tengah vertikal */
+    margin-bottom: 25px; /* jarak ke konten bawah */
+    background: var(--bg-light); /* background header */
+    padding: 10px 15px; /* jarak dalam */
+    border-radius: 8px; /* sudut membulat */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* bayangan halus */
+}
+
+.header-left {
+    display: flex; /* flexbox */
+    align-items: center; /* sejajar vertikal */
+}
+
+.back-icon-img {
+    width: 18px; /* ukuran ikon kembali */
+    height: 18px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(50%); /* warna abu */
+    margin-right: 15px; /* jarak ke teks */
+    cursor: pointer; /* bisa diklik */
+}
+
+.header-logo-text {
+    display: flex; /* flexbox */
+    align-items: center;
+    font-weight: bold; /* teks tebal */
+    color: var(--text-color); /* warna teks */
+}
+
+.header-logo-icon-img { 
+    width: 24px; /* ukuran ikon */
+    height: 24px;
+    object-fit: contain;
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* ikon warna primary */
+    margin-right: 8px;
+}
+
+.app-name {
+    font-size: 18px; /* ukuran nama aplikasi */
+    font-weight: 600; /* ketebalan teks */
+}
+
+.header-right {
+    display: flex; /* flexbox */
+    align-items: center;
+}
+
+.notification-icon-main-img {
+    width: 18px; /* ukuran ikon notifikasi */
+    height: 18px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(50%);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.header-profile-img {
+    width: 35px; /* ukuran foto profil */
+    height: 35px;
+    border-radius: 50%; /* bentuk lingkaran */
+    object-fit: cover;
+    border: 2px solid var(--primary-color); /* border warna utama */
+}
+
+/* --- Cards Statistik --- */
+.cards-container {
+    display: flex; /* menampilkan card statistik secara sejajar horizontal */
+    gap: 20px; /* jarak antar card */
+    margin-bottom: 30px; /* jarak ke section bawah */
+}
+
+.stat-card {
+    flex: 1; /* semua card punya lebar sama */
+    background: var(--bg-light); /* background card */
+    padding: 20px; /* jarak isi ke tepi card */
+    border-radius: 12px; /* sudut card membulat */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* bayangan halus */
+    border-left: 5px solid var(--primary-color); /* aksen warna utama di kiri card */
+}
+
+.card-title-group {
+    display: flex; /* judul dan ikon sejajar */
+    justify-content: space-between; /* judul kiri, ikon kanan */
+    align-items: center; /* rata tengah vertikal */
+    margin-bottom: 10px; /* jarak ke isi card */
+}
+
+.card-title {
+    font-size: 14px; /* ukuran judul card */
+    font-weight: 600; /* ketebalan teks */
+    color: var(--light-text); /* warna teks sekunder */
+}
+
+/* Styling untuk ikon kecil di Card Statistik */
+.icon-small-img {
+    width: 16px; /* ukuran ikon kecil */
+    height: 16px;
+    object-fit: contain; /* ikon tidak gepeng */
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* filter agar ikon mendekati warna primary */
+}
+
+.stat-value {
+    font-size: 28px; /* ukuran angka utama statistik */
+    font-weight: bold; /* angka dibuat menonjol */
+    margin-bottom: 5px; /* jarak ke keterangan */
+    color: var(--text-color); /* warna teks utama */
+}
+
+.stat-period {
+    font-size: 12px; /* teks kecil */
+    color: var(--light-text); /* warna teks sekunder */
+}
+
+/* --- Main Grid Layout --- */
+.main-grid {
+    display: grid; /* menggunakan CSS Grid */
+    grid-template-columns: 2fr 1fr; /* kolom kiri lebih lebar dari kanan */
+    grid-template-rows: auto auto; /* tinggi baris menyesuaikan konten */
+    gap: 20px; /* jarak antar section */
+    margin-bottom: 30px; /* jarak ke section bawah */
+}
+
+.section {
+    background: var(--bg-light); /* background section */
+    padding: 20px; /* jarak isi ke tepi */
+    border-radius: 12px; /* sudut membulat */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* bayangan halus */
+}
+
+.section h2 {
+    margin-top: 0; /* menghilangkan margin atas bawaan h2 */
+    font-size: 18px; /* ukuran judul section */
+    font-weight: 600; /* ketebalan judul */
+}
+
+.section small {
+    display: block; /* teks kecil turun ke baris baru */
+    margin-bottom: 15px; /* jarak ke konten */
+    color: var(--light-text); /* warna teks sekunder */
+    font-size: 12px; /* ukuran kecil */
+}
+
+
+/* Penempatan section di grid */
+.earnings-overview {
+    grid-column: 1 / 2; /* berada di kolom kiri */
+}
+
+.quick-actions {
+    grid-column: 2 / 3; /* berada di kolom kanan */
+    grid-row: 1 / 2; /* baris pertama */
+}
+
+.active-trips {
+    grid-column: 1 / 2; /* kolom kiri */
+}
+
+.recent-activity {
+    grid-column: 2 / 3; /* kolom kanan */
+    grid-row: 2 / 3; /* baris kedua */
+}
+
+
+/* --- Ringkasan Pendapatan (Chart Placeholder) --- */
+.chart-area {
+    display: flex; /* flexbox untuk area chart */
+    border-left: 1px solid var(--border-color); /* garis sumbu Y */
+    border-bottom: 1px solid var(--border-color); /* garis sumbu X */
+    padding-bottom: 5px; /* jarak ke bawah */
+    position: relative; /* referensi posisi elemen di dalam */
+    height: 180px; /* tinggi area chart */
+}
+
+.chart-labels {
+    display: flex; /* flexbox */
+    flex-direction: column; /* label disusun ke bawah */
+    justify-content: space-between; /* jarak label merata */
+    padding-right: 10px; /* jarak ke chart */
+    font-size: 12px; /* ukuran teks */
+    color: var(--light-text); /* warna teks */
+    position: absolute; /* posisi bebas */
+    left: -40px; /* geser ke kiri */
+    height: 100%; /* tinggi mengikuti chart */
+}
+
+.chart-labels span {
+    text-align: right; /* teks rata kanan */
+    height: 1px; /* tinggi minimal */
+}
+
+.chart-main {
+    flex-grow: 1; /* chart mengisi sisa ruang */
+    position: relative; /* referensi garis grafik */
+}
+
+
+.chart-line-placeholder {
+    /* Simulasi garis kurva grafik */
+    position: absolute; /* menumpuk di atas area chart */
+    width: 100%; /* selebar chart */
+    height: 100%; /* setinggi chart */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 70 C 15 30, 35 60, 50 40 S 80 80, 100 50' fill='none' stroke='%23C70000' stroke-width='1.5'/%3E%3C/svg%3E");
+    /* svg dipakai sebagai simulasi grafik */
+    background-size: 100% 100%; /* menyesuaikan ukuran */
+    background-repeat: no-repeat; /* tidak diulang */
+    opacity: 0.8; /* sedikit transparan */
+}
+
+
+.chart-x-axis {
+    position: absolute; /* posisi bebas di bawah chart */
+    bottom: -20px; /* geser ke bawah */
+    left: 0;
+    width: 100%; /* selebar chart */
+    display: flex; /* flexbox */
+    justify-content: space-between; /* label menyebar */
+    padding-left: 40px; /* menyesuaikan dengan label Y */
+    font-size: 12px; /* ukuran teks */
+    color: var(--light-text); /* warna teks */
+}
+
+
+/* --- Aksi Cepat --- */
+.action-btn-link {
+    text-decoration: none; /* menghilangkan garis bawah link */
+    display: block; /* link memenuhi lebar */
+    margin-bottom: 10px; /* jarak antar tombol */
+}
+
+
+/* Gaya khusus untuk tombol "Buat Perjalanan Baru" */
+.action-btn-link.next-page-btn .action-btn {
+    background-color: var(--primary-color); /* warna background tombol utama */
+    color: rgb(151, 0, 0); /* warna teks tombol */
+    font-weight: bold; /* teks tombol ditebalkan */
+    border-color: var(--primary-color); /* warna border mengikuti warna utama */
+}
+
+/* Styling ikon di dalam tombol utama */
+.action-btn-link.next-page-btn .action-btn img {
+    filter: brightness(0) invert(1); 
+    /* membuat ikon jadi putih agar kontras dengan background merah */
+}
+
+/* Efek saat tombol di-hover */
+.action-btn-link.next-page-btn .action-btn:hover {
+    background: #A80000; /* warna lebih gelap saat mouse diarahkan */
+}
+
+
+
+/* Tombol aksi di bagian Quick Actions */
+.action-buttons button {
+    width: 100%; /* tombol selebar container */
+    padding: 12px 15px; /* jarak teks ke tepi tombol */
+    /* margin-bottom dihapus karena sudah diatur di .action-btn-link */
+    background: var(--bg-dark); /* background default tombol */
+    border: 1px solid var(--border-color); /* border tipis */
+    border-radius: 8px; /* sudut membulat */
+    text-align: left; /* teks rata kiri */
+    font-size: 14px; /* ukuran teks */
+    color: var(--text-color); /* warna teks */
+    cursor: pointer; /* kursor berubah jadi pointer */
+    transition: background 0.2s, border-color 0.2s; 
+    /* animasi halus saat hover */
+    display: flex; /* agar ikon dan teks sejajar */
+    align-items: center; /* ikon dan teks rata tengah vertikal */
+}
+
+
+/* Styling untuk ikon di dalam tombol aksi */
+.action-buttons button img {
+    width: 18px; /* ukuran ikon */
+    height: 18px;
+    object-fit: contain; /* ikon tidak terdistorsi */
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* filter agar ikon warnanya mendekati primary color */
+    margin-right: 10px; /* jarak ikon ke teks */
+}
+
+
+/* Efek hover tombol aksi */
+.action-buttons button:hover {
+    background: #f0f0f0; /* background berubah saat hover */
+    border-color: #ddd; /* border sedikit lebih terang */
+}
+
+
+/* Informasi tambahan di bawah tombol aksi */
+.action-info {
+    font-size: 12px; /* ukuran teks kecil */
+    color: var(--light-text); /* warna teks sekunder */
+    margin-top: 15px; /* jarak dari tombol */
+    text-align: center; /* teks rata tengah */
+}
+
+
+/* --- Perjalanan Aktif --- */
+.trip-item {
+    display: flex; /* ikon dan detail sejajar */
+    align-items: center; /* rata tengah vertikal */
+    padding: 15px 0; /* jarak atas dan bawah */
+    border-bottom: 1px solid var(--border-color); /* garis pemisah tiap item */
+}
+
+/* Menghilangkan garis di item terakhir */
+.trip-item:last-child {
+    border-bottom: none;
+}
+
+
+/* Styling ikon perjalanan */
+.trip-icon-img {
+    width: 20px; /* ukuran ikon */
+    height: 20px;
+    object-fit: contain; /* ikon tidak gepeng */
+    filter: invert(15%) sepia(87%) saturate(3062%) hue-rotate(330deg) brightness(88%) contrast(93%);
+    /* warna ikon mendekati primary */
+    margin-right: 15px; /* jarak ke teks */
+}
+
+/* Detail perjalanan */
+.trip-details {
+    flex-grow: 1; /* detail mengisi sisa ruang */
+}
+
+/* Lokasi perjalanan */
+.trip-location {
+    margin: 0; /* menghapus margin default */
+    font-weight: 600; /* teks agak tebal */
+    font-size: 14px; /* ukuran teks */
+}
+
+/* Informasi kecil di bawah lokasi */
+.trip-details small {
+    display: inline-block; /* tetap satu baris */
+    margin-right: 10px; /* jarak antar info */
+    font-size: 12px; /* teks kecil */
+    color: var(--light-text); /* warna sekunder */
+}
+
+
+/* Jumlah order di perjalanan */
+.trip-orders {
+    font-size: 12px; /* ukuran teks */
+    font-weight: bold; /* teks tebal */
+    color: var(--primary-color); /* warna utama */
+}
+
+
+
+/* --- Aktivitas Terbaru (Tabel) --- */
+.activity-table-wrapper {
+    overflow-x: auto; 
+    /* tabel bisa di-scroll horizontal jika layar kecil */
+}
+
+/* Tabel aktivitas */
+.recent-activity table {
+    width: 100%; /* tabel selebar container */
+    border-collapse: collapse; /* border menyatu */
+    font-size: 13px; /* ukuran teks tabel */
+}
+
+
+/* Tabel aktivitas */
+.recent-activity table {
+    width: 100%; /* tabel selebar container */
+    border-collapse: collapse; /* border menyatu */
+    font-size: 13px; /* ukuran teks tabel */
+}
+
+
+/* Header tabel */
+.recent-activity th {
+    font-weight: 600; /* teks tebal */
+    color: var(--light-text); /* warna teks sekunder */
+    text-transform: uppercase; /* huruf kapital */
+    font-size: 11px; /* ukuran kecil */
+    white-space: nowrap; /* teks tidak turun baris */
+}
+
+
+/* Badge status (Pending / Confirmed / Rejected) */
+.status-badge {
+    display: inline-block; 
+    /* supaya badge bisa punya padding tapi tetap inline */
+    
+    padding: 3px 8px; 
+    /* ukuran ruang di dalam badge */
+
+    border-radius: 12px; 
+    /* membuat badge berbentuk pill / oval */
+
+    font-size: 11px; 
+    /* ukuran teks kecil */
+
+    font-weight: bold; 
+    /* teks status ditebalkan */
+
+    color: var(--bg-light); 
+    /* warna teks putih agar kontras dengan background */
+}
+
+
+/* Status: Pending */
+.status-badge.pending {
+    background-color: #f39c12; 
+    /* warna kuning/orange menandakan proses menunggu */
+}
+
+/* Status: Confirmed */
+.status-badge.confirmed {
+    background-color: #27ae60; 
+    /* warna hijau menandakan berhasil / disetujui */
+}
+
+/* Status: Rejected */
+.status-badge.rejected {
+    background-color: #e74c3c; 
+    /* warna merah menandakan ditolak / gagal */
+}
+
+
+/* Link pada tabel aktivitas */
+.recent-activity a {
+    color: var(--primary-color); 
+    /* warna link mengikuti warna utama aplikasi */
+
+    text-decoration: none; 
+    /* menghilangkan garis bawah link */
+
+    font-weight: 600; 
+    /* teks link agak tebal */
+
+    white-space: nowrap; 
+    /* teks link tidak turun ke baris baru */
+}
+
+/* --- Footer Dashboard --- */
+.footer-dashboard {
+    text-align: center; 
+    /* teks footer rata tengah */
+
+    padding: 15px 0; 
+    /* jarak atas dan bawah */
+
+    border-top: 1px solid var(--border-color); 
+    /* garis pemisah antara konten dan footer */
+
+    margin-top: 20px; 
+    /* jarak dari konten di atasnya */
+
+    font-size: 12px; 
+    /* ukuran teks kecil */
+
+    color: var(--light-text); 
+    /* warna teks sekunder */
+}
+
+
+/* Spasi antar item di footer */
+.footer-dashboard span {
+    margin-right: 15px; 
+    /* jarak antar teks/footer item */
+}

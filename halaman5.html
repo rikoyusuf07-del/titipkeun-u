@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Orders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="halaman5.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="Logo Titipkeun-U.jpeg" alt="Titipkeun Logo">
+    </div>
+
+    <div class="nav-btn active">
+      <img src="package.png" alt="Orders">
+    </div>
+    <div class="nav-btn">
+      <img src="settings.png" alt="Settings">
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="page-head">
+      <h1>Kelola Pesanan</h1>
+      <div class="profile">
+        <img src="bell.png" alt="Notification">
+        <img src="woman.png" alt="Profile">
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary-grid">
+      <div class="summary-card">
+        <p>Total Pesanan Tertunda</p>
+        <h2>12</h2>
+        <span>Pembaruan terakhir 5 menit yang lalu</span>
+      </div>
+      <div class="summary-card">
+        <p>Pembaruan Bulan Ini</p>
+        <h2>+25</h2>
+        <span>Dibandingkan bulan lalu</span>
+      </div>
+      <div class="summary-card">
+        <p>Total Pembayaran</p>
+        <h2>Rp.200.000,00</h2>
+        <span>Dari pesanan yang telah dikonfirmasi</span>
+      </div>
+      <div class="summary-card">
+        <p>Barang Dalam Pengiriman</p>
+        <h2>1</h2>
+        <span>Menunggu Pengiriman</span>
+      </div>
+    </div>
+
+    <!-- FILTER -->
+    <div class="filters">
+      <input type="text" placeholder="Cari pesanan berdasarkan nama pembeli...">
+      <select><option>Filter berdasarkan Status</option></select>
+      <select><option>Filter berdasarkan Tanggal Perjalanan</option></select>
+      <select><option>Filter berdasarkan Kategori</option></select>
+      <button class="clear-btn">Hapus Filter</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-Pesanan">
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>ID Pesanan</th>
+            <th>Nama Pembeli</th>
+            <th>Ringkasan Item Pesanan</th>
+            <th>Total Pembayaran</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- ISI TABEL -->
+            <td><input type="checkbox"></td>
+            <td>ORD001</td>
+            <td>Alice Johnson</td>
+            <td>Uniqlo AIRism Oversized T-Shirt (White, L) (1), MUJI Gel Ink Ballpoint Pen (Black, 0.5mm) (5)</td>
+            <td>Rp.250.000,00</td>
+            <td><span class="status pending">Menunggu</span></td>
+            <td class="actions">
+              <a href="halaman4.html" class="View">
+                <img src="eye.png" alt="View">
+
+              </a>
+
+              <img src="communication.png" alt="Chat">
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>ORD002</td>
+            <td>Bob Williams</td>
+            <td>Sepatu edisi terbatas (1)</td>
+            <td>Rp.200.000,00</td>
+            <td><span class="status confirmed">Dikonfirmasi</span></td>
+            <td class="actions">
+              <img src="eye.png" alt="View">
+              <img src="communication.png" alt="Chat">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- INFORMASI BAWAH TABEL -->
+
+      <div class="table-footer">
+        <span>0 dari 2 baris dipilih</span>
+        <div class="pagination">
+          <button>Sebelumnya</button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>Berikutnya</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      Kebijakan Privasi | Syarat & Ketentuan | Bantuan <br>
+      © 2025 Justipify. Seluruh hak cipta dilindungi.
+    </footer>
+
+  </main>
+
+</div>
+
+</body>
+</html>

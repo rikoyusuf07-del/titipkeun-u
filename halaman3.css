@@ -1,0 +1,462 @@
+:root {
+    --bg-light: #ffffff;      /* warna putih, dipakai untuk card / panel */
+    --border-color: #f2f2f2;  /* warna garis pembatas */
+    --primary-color: #c80000; /* warna utama aplikasi (merah) */
+}
+
+
+
+
+
+/* HEADER */
+.page-title {
+    font-size: 18px;          /* ukuran judul halaman */
+    font-weight: 600;         /* ketebalan agak tebal */
+    color: var(--text-color); /* warna teks utama */
+}
+
+
+
+.breadcrumb {
+    font-size: 12px;          /* teks kecil */
+    color: var(--light-text); /* warna abu / teks sekunder */
+}
+
+
+/* CARD TITLE */
+.card-header h2 {
+    font-size: 18px;     /* ukuran judul card */
+    font-weight: 600;    /* tebal */
+}
+
+
+.card-header small {
+    font-size: 12px;          /* teks kecil */
+    color: var(--light-text); /* warna abu */
+}
+
+
+/* FORM */
+.form-section h3 {
+    font-size: 14px;     /* judul section form */
+    font-weight: 600;    /* agak tebal */
+}
+
+
+label {
+    font-size: 13px;          /* ukuran teks label */
+    font-weight: 500;         /* sedang */
+    color: var(--text-color); /* warna teks utama */
+}
+
+
+input[type="text"] {
+    font-family: 'Arial', sans-serif; /* font input */
+    font-size: 13px;                  /* ukuran teks di input */
+    color: var(--text-color);         /* warna teks */
+}
+
+
+/* CHECKBOX */
+.category-checkboxes label {
+    font-size: 13px; /* ukuran teks label checkbox */
+}
+
+
+/* SIDE PANEL */
+.card h3 {
+    font-size: 15px;   /* judul card di side panel */
+    font-weight: 600;  /* tebal */
+}
+
+
+.trip-item-active p {
+    font-size: 13px;   /* teks isi perjalanan */
+    font-weight: 600;  /* dibuat tebal biar kelihatan aktif */
+}
+
+
+.trip-item-active small {
+    font-size: 12px;          /* ukuran teks kecil (keterangan tambahan) */
+    color: var(--light-text); /* warna abu / teks sekunder */
+}
+
+
+/* BUTTON */
+.submit-btn {
+    font-family: 'Arial', sans-serif; /* jenis font tombol */
+    font-size: 14px;                  /* ukuran teks tombol */
+    font-weight: 600;                 /* teks tombol dibuat tebal */
+}
+
+
+/* FOOTER */
+.footer-dashboard {
+    font-size: 12px;          /* ukuran teks footer kecil */
+    color: var(--light-text); /* warna abu */
+}
+
+/* RESET */
+* {
+    margin: 0;               /* hapus margin bawaan browser */
+    padding: 0;              /* hapus padding bawaan */
+    box-sizing: border-box;  /* ukuran elemen lebih konsisten */
+}
+
+
+body {
+    font-family: Arial, sans-serif; /* font default seluruh halaman */
+    background: #a91111;            /* warna background halaman */
+}
+
+
+/* CONTAINER */
+.app-container {
+    display: flex;      /* sidebar & konten sejajar horizontal */
+    min-height: 100vh;  /* tinggi minimal satu layar */
+}
+
+
+/* SIDEBAR */
+.sidebar-mini {
+    width: 50px;                        /* lebar sidebar */
+    background: var(--bg-light);        /* background putih */
+    border-right: 1px solid var(--border-color); /* garis pemisah */
+}
+
+
+
+.sidebar-menu {
+    display: flex;          /* pakai flexbox */
+    flex-direction: column; /* isi disusun ke bawah */
+    align-items: center;    /* isi rata tengah */
+}
+
+
+.sidebar-logo {
+    padding: 20px; /* jarak logo dari tepi sidebar */
+}
+
+.logo-img {
+    width: 28px;   /* lebar logo */
+    height: 28px;  /* tinggi logo */
+}
+
+
+
+.main-menu {
+    list-style: none; /* hilangkan bullet list */
+}
+
+
+.main-menu li {
+    margin: 15px 0;          /* jarak atas-bawah antar menu */
+    display: flex;           /* flex biar isi bisa diatur */
+    justify-content: center; /* ikon di tengah */
+    padding: 12px;           /* area klik lebih besar */
+    margin-bottom: 15px;     /* jarak bawah tambahan */
+    cursor: pointer;         /* kursor tangan */
+    transition: background 0.2s; /* animasi hover halus */
+}
+
+
+.sidebar-link img {
+    width: 22px;                  /* ukuran ikon */
+    height: 22px;
+    object-fit: contain;          /* ikon tidak gepeng */
+}
+
+
+.sidebar-link {
+    display: flex;                /* flexbox */
+    justify-content: center;      /* rata tengah horizontal */
+    align-items: center;          /* rata tengah vertikal */
+}
+
+
+.icon-wrapper {
+    width: 36px;          /* menentukan lebar area pembungkus ikon */
+    height: 36px;         /* menentukan tinggi area pembungkus ikon */
+    border-radius: 16%;   /* membuat sudut wrapper sedikit membulat agar tidak kaku */
+    display: flex;        /* mengaktifkan flexbox untuk mengatur posisi isi di dalamnya */
+    align-items: center;  /* memposisikan ikon di tengah secara vertikal */
+    justify-content: center; /* memposisikan ikon di tengah secara horizontal */
+}
+
+
+/* ACTIVE ICON SIDEBAR */
+.main-menu li.active .icon-wrapper {
+    background: var(--primary-color); 
+    /* memberi background warna utama pada icon-wrapper saat menu aktif */
+}
+
+
+
+.main-menu li.active img {
+    filter: brightness(0) invert(1); 
+    /* mengubah warna ikon menjadi putih agar kontras dengan background merah */
+}
+
+.icon-wrapper img {
+    width: 18px; 
+    /* ukuran lebar ikon di dalam wrapper */
+    height: 18px; 
+    /* ukuran tinggi ikon */
+    object-fit: contain; 
+    /* menjaga proporsi ikon agar tidak gepeng */
+    filter: grayscale(100%) brightness(50%); 
+    /* membuat ikon berwarna abu-abu saat tidak aktif */
+}
+
+
+/* MAIN */
+.main-content {
+    flex: 1; 
+    /* konten utama mengisi sisa ruang setelah sidebar */
+    padding: 20px; 
+    /* jarak konten dengan tepi layar */
+}
+
+
+/* HEADER */
+.top-header {
+    display: flex; 
+    /* menggunakan flexbox untuk layout header */
+    justify-content: space-between; 
+    /* memisahkan bagian kiri dan kanan header */
+    align-items: center; 
+    /* menyelaraskan elemen secara vertikal */
+    margin-bottom: 20px; 
+    /* jarak header dengan konten di bawahnya */
+}
+
+
+
+.page-title {
+    font-size: 18px; 
+    /* ukuran teks judul halaman */
+    font-weight: bold; 
+    /* membuat judul lebih menonjol */
+}
+
+
+.breadcrumb {
+    font-size: 12px; 
+    /* ukuran teks breadcrumb lebih kecil dari judul */
+}
+
+
+/* CONTENT */
+.content-area {
+    display: flex; 
+    /* menata isi konten secara horizontal */
+    gap: 20px; 
+    /* jarak antar elemen konten */
+}
+
+
+/* FORM CARD */
+.form-card {
+    flex: 2; 
+    /* ukuran card lebih besar dibanding elemen lain di content-area */
+    background: #fff; 
+    /* background putih agar kontras dengan halaman */
+    padding: 20px; 
+    /* jarak isi form dengan tepi card */
+    border-radius: 10px; 
+    /* sudut card membulat agar tampilan lebih modern */
+}
+
+
+.card-header {
+    margin-bottom: 20px;
+    /* memberi jarak bawah antara header card dan isi card */
+}
+
+
+.form-section {
+    margin-bottom: 20px;
+    /* jarak antar section form supaya tidak terlalu rapat */
+}
+
+
+input[type="text"] {
+    width: 100%;
+    /* input memenuhi lebar container */
+    padding: 8px;
+    /* ruang dalam input agar nyaman diketik */
+    margin: 8px 0 12px;
+    /* jarak atas dan bawah input */
+    border-radius: 6px;
+    /* sudut input dibuat membulat */
+    border: 1px solid #ccc;
+    /* garis tepi input warna abu */
+}
+
+
+/* IMAGE UPLOAD */
+.image-upload-area {
+    border: 2px dashed #ccc;
+    /* border putus-putus sebagai indikator area upload */
+    padding: 20px;
+    /* jarak isi dengan border */
+    text-align: center;
+    /* teks dan ikon berada di tengah */
+    border-radius: 8px;
+    /* sudut area upload membulat */
+}
+
+
+.upload-placeholder-img {
+    width: 60px;
+    /* ukuran ikon gambar placeholder */
+    margin-bottom: 10px;
+    /* jarak ikon dengan teks di bawahnya */
+}
+
+
+/* BUTTON */
+.submit-btn {
+    background: #c80000;
+    /* warna utama tombol (merah) */
+    color: white;
+    /* warna teks tombol */
+    padding: 10px 20px;
+    /* ukuran tombol agar nyaman diklik */
+    border: none;
+    /* menghilangkan border default */
+    border-radius: 8px;
+    /* sudut tombol membulat */
+    cursor: pointer;
+    /* cursor berubah jadi tangan saat hover */
+}
+
+
+/* SIDE PANEL */
+.side-panel {
+    flex: 1;
+    /* lebar side panel lebih kecil dibanding form utama */
+}
+
+
+.card {
+    background: #fff;
+    /* background putih agar terlihat seperti card */
+    padding: 15px;
+    /* jarak isi card dengan tepi */
+    border-radius: 10px;
+    /* sudut card membulat */
+    margin-bottom: 20px;
+    /* jarak antar card */
+}
+
+
+.trip-item-active {
+    margin-top: 10px;
+    /* jarak antara judul card dan item perjalanan aktif */
+}
+
+
+/* FOOTER */
+.footer-dashboard {
+    margin-top: 30px;
+    /* memberi jarak antara konten utama dan footer */
+    font-size: 12px;
+    /* ukuran teks kecil khas footer */
+    text-align: center;
+    /* isi footer rata tengah */
+}
+
+
+/* FIX ICON MY TRIPS */
+.icon-small-list {
+    width: 16px;
+    /* ukuran kecil ikon di daftar trip */
+    height: 16px;
+    object-fit: contain;
+    /* ikon tidak terdistorsi */
+    margin-right: 6px;
+    /* jarak ikon ke teks */
+    vertical-align: middle;
+    /* ikon sejajar dengan teks */
+    filter: grayscale(100%) brig1htness(50%);
+    /* warna ikon dibuat abu-abu */
+}
+
+
+.order-info {
+    display: flex;
+    /* ikon dan teks sejajar horizontal */
+    align-items: center;
+    /* ikon dan teks rata tengah secara vertikal */
+    margin-top: 6px;
+    /* jarak dari elemen di atasnya */
+    font-size: 12px;
+    /* ukuran teks kecil */
+    color: #555;
+    /* warna abu gelap agar tidak terlalu mencolok */
+}
+
+.no-comments-area {
+    text-align: center;
+    /* isi berada di tengah */
+    padding: 20px 10px;
+    /* ruang dalam area kosong */
+    color: #777;
+    /* warna teks abu-abu */
+}
+
+
+.no-comments-area img {
+    width: 120px;
+    /* ukuran ilustrasi kosong */
+    opacity: 0.6;
+    /* gambar dibuat sedikit transparan */
+    margin-bottom: 10px;
+    /* jarak ke teks */
+}
+
+
+.no-comments-area p {
+    font-size: 13px;
+    /* ukuran teks penjelasan */
+}
+
+/* FIX HEADER ICON */
+.notification-img {
+    width: 22px;
+    /* ukuran ikon notifikasi */
+    height: 22px;
+    object-fit: contain;
+    /* ikon tidak gepeng */
+    cursor: pointer;
+    /* tanda ikon bisa diklik */
+}
+
+
+.profile-img {
+    width: 32px;
+    /* ukuran foto profil */
+    height: 32px;
+    border-radius: 50%;
+    /* foto dibuat bulat */
+    object-fit: cover;
+    /* foto tetap proporsional */
+    cursor: pointer;
+    /* bisa diklik */
+}
+
+.logo-img {
+    width: 32px;
+    /* ukuran logo di header */
+    height: 32px;
+    object-fit: contain;
+    /* logo tidak terdistorsi */
+}
+
+.top-header {
+    max-height: 60px;
+    /* membatasi tinggi header agar tidak terlalu besar */
+    padding: 10px 15px;
+    /* jarak isi header ke tepi */
+}
