@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #e96479;
+    --bg-color: #f9fbfd;
+    --border-color: #edf2f7;
+    --text-main: #333;
+    --text-muted: #718096;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --status-online: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER --- */
+.header-wrapper {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    /* Samakan dengan container agar sejajar */
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-left: -10px;
+    /* Tarik sedikit ke kiri */
+}
+
+.logo-main-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 8px 15px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+    min-height: 60vh; /* Agar footer tidak naik jika konten sedikit */
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Filter Buttons */
+.filter-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-gray);
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, 
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Table Section */
+.table-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.table-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-header h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    background: #fafafa;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 18px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* --- Status Styles --- */
+.status-processing {
+    background-color: var(--bg-gray-box);
+    color: var(--text-dark);
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #fff8e1;
+    color: #f57f17;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #ffecb3;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.status-cancelled {
+    background-color: #fff5f5;
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #ffe3e3;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.status-text {
+    font-size: 13px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Button Detail */
+.view-detail-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.view-detail-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* --- FOOTER STYLES (Baru Ditambahkan) --- */
+footer {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1100px; /* Lebar konten footer */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Agar responsif di HP */
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Mencegah kolom terlalu sempit di HP */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    /* margin-left: -15px; -> Opsional: Saya sarankan dihapus agar rata kiri normal, tapi jika ingin mepet kiri biarkan */
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 40px; /* Ukuran disesuaikan agar proporsional */
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-info {
+    font-size: 0.85em;
+    color: #777;
+    max-width: 250px;
+    line-height: 1.6;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.footer-links ul,
+.footer-support ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a,
+.footer-support li a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.9em;
+    line-height: 2.2;
+    transition: color 0.2s;
+}
+
+.footer-links li a:hover,
+.footer-support li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding: 0 20px;
+}

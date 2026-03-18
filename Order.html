@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Titipkeun-U</title>
+    <link rel="stylesheet" href="Order.css">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="Titipkeun U Logo" class="logo-main-img"> TITIPKEUN-U
+            </div>
+            <div class="nav">
+                <a href="#">Create Request</a>
+                <a href="#">Orders</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <h1 class="page-title">My Order History</h1>
+
+        <div class="filter-group">
+            <button class="filter-btn active">all</button>
+            <button class="filter-btn">pending payment</button>
+            <button class="filter-btn">processing</button>
+            <button class="filter-btn">shipped</button>
+            <button class="filter-btn">completed</button>
+            <button class="filter-btn">cancelled</button>
+        </div>
+
+        <div class="table-card">
+            <div class="table-header">
+                <h2>All Orders</h2>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>JSTP001</strong></td>
+                            <td>2025-10-24</td>
+                            <td>Rp 125.250</td>
+                            <td><span class="status-text">completed</span></td>
+                            <td><button class="view-detail-btn">View Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JSTP002</strong></td>
+                            <td>2025-10-24</td>
+                            <td>Rp 80.200</td>
+                            <td><span class="status-text">shipped</span></td>
+                            <td><button class="view-detail-btn">View Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JSTP003</strong></td>
+                            <td>2025-10-22</td>
+                            <td>Rp 210.275</td>
+                            <td><span class="status-processing">processing</span></td>
+                            <td><button class="view-detail-btn">View Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JSTP004</strong></td>
+                            <td>2025-10-22</td>
+                            <td>RP 45.299</td>
+                            <td><span class="status-pending">pending payment</span></td>
+                            <td><button class="view-detail-btn">View Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JSTP006</strong></td>
+                            <td>2025-10-21</td>
+                            <td>USD 150.299</td>
+                            <td><span class="status-cancelled">cancelled</span></td>
+                            <td><button class="view-detail-btn">View Detail</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/Logo.png" alt="Titipkeun U Logo" onerror="this.style.display='none'"> 
+                    TITIPKEUN-U
+                </div>
+                <p class="footer-info">Gunakan Penjelajah Titipkeun-U Untuk Kampusmu!</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@titipkeun-u.com">info@titipkeun-u.com</a></p>
+                <p>Phone: +62 812-3456-7890</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 TITIPKEUN-U. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Titipkeun-U</title>
+    <link rel="stylesheet" href="OrderTracking.css">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="Titipkeun U Logo" class="logo-main-img"> TITIPKEUN-U
+            </div>
+            <div class="nav">
+                <a href="#">Create Request</a>
+                <a href="#">My Orders</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <h1 class="order-id">Order Tracking for #JAS001-20251024-005</h1>
+
+        <div class="grid-layout">
+            <div class="left-col">
+                <section class="card timeline-card">
+                    <h3>Order Status Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label">Menunggu Pembayaran</p>
+                                <p class="timestamp">2025-10-26 10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label">Pembayaran Diterima</p>
+                                <p class="timestamp">2025-10-26 10:10 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label">Telah Dibayar</p>
+                                <p class="timestamp">2025-10-26 10:20 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item current">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label highlight">Barang Diantarkan</p>
+                                <p class="timestamp">2025-10-27 11:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item upcoming">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label">Diantarkan</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item upcoming">
+                            <div class="marker"></div>
+                            <div class="content">
+                                <p class="status-label">Selesai</p>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+
+                <section class="card chat-card">
+                    <h3>Chat with Olive</h3>
+                    <div class="chat-window">
+                        <div class="msg received">
+                            <p class="sender-name">Penjelajah</p>
+                            <div class="bubble">Halo, aku udah di depan gedung C asrama putri, yah</div>
+                            <p class="chat-time">10:40 AM</p>
+                        </div>
+                        <div class="msg sent">
+                            <div class="bubble">Oke, aku ke depan Kak, bentar yah!</div>
+                            <p class="chat-time">10:41 PM</p>
+                        </div>
+                        <div class="msg received">
+                            <p class="sender-name">Penjelajah</p>
+                            <div class="bubble">Oke, Kak...</div>
+                            <p class="chat-time">10:41 PM</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" placeholder="Type your message...">
+                        <button class="btn-send">Send</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-col">
+                <section class="card user-card">
+                    <h3>Jastipper Details</h3>
+                    <div class="user-info">
+                        <div class="avatar-wrapper">
+                            <img src="assets/profile.png" alt="User Avatar" class="avatar">
+                            <span class="status-dot"></span>
+                        </div>
+                        <p class="username">Olive</p>
+                        <div class="status-badge">Status: Online</div>
+                    </div>
+                </section>
+
+                <section class="card shipping-card">
+                    <h3>Shipping Information</h3>
+                    <div class="ship-detail">
+                        <p class="label">Tracking Number:</p>
+                        <p class="value">SPD-JAS001-XYZ-12345</p>
+                    </div>
+                    <div class="ship-detail">
+                        <p class="label">Courier:</p>
+                        <p class="value">Olive</p>
+                    </div>
+                </section>
+
+                <section class="card rating-card">
+                    <h3>Rate Jastipper</h3>
+                    <div class="rating-content">
+                        <div class="stars-display">
+                            <img src="assets/star (1).png" alt="star" class="star-icon">
+                            <img src="assets/star (1).png" alt="star" class="star-icon">
+                            <img src="assets/star (1).png" alt="star" class="star-icon">
+                            <img src="assets/star (1).png" alt="star" class="star-icon">
+                            <img src="assets/star (1).png" alt="star" class="star-icon">
+                        </div>
+                        <p class="rating-hint">Give a star rating for Olive</p>
+                        <textarea class="rating-notes" placeholder="Write your experience with this jastipper..."></textarea>
+                    </div>
+                </section>
+
+                <div class="action-area card">
+                    <button class="btn-confirm">Confirm Item Receipt & Rate</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/Logo.png" alt="Titipkeun U Logo"> TITIPKEUN-U
+                </div>
+                <p class="footer-info">Gunakan Penjelajah Titipkeun-U Untuk Kampusmu!</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@titipkeun-u.com">info@titipkeun-u.com</a></p>
+                <p>Phone: +62 812-3456-7890</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 TITIPKEUN-U. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Payment - TITIPKEUN-U</title>
+    <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="Titipkeun U Logo"> 
+                TITIPKEUN-U
+            </div>
+            <nav>
+                <a href="#">Create Request</a>
+                <a href="#">My Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Complete Your Payment</h1>
+
+        <div class="payment-deadline">
+            <div class="deadline-text">
+                <span class="icon-placeholder">🕒</span>
+                <span>Payment Deadline</span>
+            </div>
+            <div class="deadline-time">
+                02j 29m 05d
+                <small>Remaining</small>
+            </div>
+        </div>
+        
+        <div class="payment-details">
+            <p class="order-id">Order ID: JASTIP-12345</p>
+            
+            <p>
+                <span>Harga Item</span>
+                <span>Rp.96.000</span>
+            </p>
+            <p>
+                <span>Biaya Penjelajah</span>
+                <span>Rp.9.600</span>
+            </p>
+            <p>
+                <span>Shipping Fee</span>
+                <span>Rp.1.000</span> </p>
+
+            <p class="total">
+                <span>Total Payable</span>
+                <span>Rp.106.600</span> </p>
+        </div>
+
+        <div class="payment-method">
+            <h2>Select Payment Method</h2>
+            <div class="method-options">
+                <div class="method-option selected"> <img src="assets/002-bank.png" alt="Bank Transfer Icon" class="method-icon">
+                    <span>Bank Transfer</span>
+                </div>
+            
+                <div class="method-option"> 
+                    <img src="assets/atm-card.png" alt="Credit/Debit Card Icon" class="method-icon">
+                    <span>Credit/Debit Card</span>
+                </div>
+            
+                <div class="method-option">
+                    <img src="assets/004-e-wallet.png" alt="E-wallet Icon" class="method-icon">
+                    <span>E-wallet</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-instructions">
+            Enter your credit or debit card details securely below. We accept E-wallet, E-Banking. Your payment will be processed instantly. We do not store your card details on our servers.
+        </div>
+
+        <button class="pay-button">Pay Now</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/Logo.png" alt="Titipkeun U Logo"> 
+                    TITIPKEUN-U
+                </div>
+                <p class="footer-info">Connecting buyers with jastippers worldwide.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p>123 Jastip Street, Jastip City, 12345</p>
+                <p>Email: <a href="mailto:info@jastippin.com">info@jastippin.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 TITIPKEUN-U. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const options = document.querySelectorAll('.method-option');
+
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                // Hapus kelas 'selected' (warna biru) dari semua opsi
+                options.forEach(opt => opt.classList.remove('selected'));
+                
+                // Tambahkan kelas 'selected' (warna biru) hanya ke opsi yang baru diklik
+                this.classList.add('selected');
+            });
+        });
+    </script>
+
+</body>
+</html>
