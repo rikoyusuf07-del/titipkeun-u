@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart / Order Summary - TITIPKEUN-U</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="Titipkeun U Logo" class="logo-main-img"> TITIPKEUN-U
+            </div>
+            <div class="nav">
+                <a href="#">Create Request</a>
+                <a href="#">Orders</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="order-summary-card">
+            <h2 class="section-title">Order Summary</h2>
+            <div class="section-content shopping-cart">
+                <h3>Your Shopping Cart</h3>
+                <button class="add-items-btn"><img src="assets/plus.png" alt="Add" class="icon-btn-img"> Add More
+                    Items</button>
+
+                <div class="cart-item">
+                    <div class="item-details">
+                        <img src="assets/ayamgeprek.jpeg" alt="Ayam Geprek Pangeran" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Ayam Geprek Pangeran</p>
+                            <p class="item-description">Nasi Ayam Crispy, Sambal, Lalapan + Es Teh Manis</p>
+                            <p class="item-qty-price">Qty: 1 x *Rp.15.000*</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn edit-btn"><img src="assets/edit.png" alt="Edit"
+                                class="icon-action-img"></button>
+                        <button class="action-btn delete-btn"><img src="assets/delete (1).png" alt="Delete"
+                                class="icon-action-img"></button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-details">
+                        <img src="assets/Starbucks.jpeg" alt="Starbucks Smoked Butterscotch Latte" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Starbucks Smoked Butterscotch Latte</p>
+                            <p class="item-description">Reguler</p>
+                            <p class="item-qty-price">Qty: 1 x *Rp.56.000*</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn edit-btn"><img src="assets/edit.png" alt="Edit"
+                                class="icon-action-img"></button>
+                        <button class="action-btn delete-btn"><img src="assets/delete (1).png" alt="Delete"
+                                class="icon-action-img"></button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-details">
+                        <img src="assets/Haus drink beng beng.jpeg" alt="Minuman Haus!" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Drink beng beng cream caramel</p>
+                            <p class="item-description">Drink beng beng x Haus!</p>
+                            <p class="item-qty-price">Qty: 1 x *Rp.25.000*</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn edit-btn"><img src="assets/edit.png" alt="Edit"
+                                class="icon-action-img"></button>
+                        <button class="action-btn delete-btn"><img src="assets/delete (1).png" alt="Delete"
+                                class="icon-action-img"></button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Shipping Information</h2>
+            <div class="section-content shipping-info">
+                <div class="info-group">
+                    <label>Shipping Address</label>
+                    <p class="address-text">Telkom University, Gedung Asrama Laki-laki, Gedung 5</p>
+                </div>
+
+                <div class="info-group">
+                    <label for="courier-select">Courier Selection</label>
+                    <select id="courier-select">
+                        <option>JastipExpress Standard (15-20 minute)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2 class="section-title">Order Summary</h2>
+            <div class="section-content price-details">
+                <div class="price-row">
+                    <p>Harga Item</p>
+                    <p class="price-value">Rp.96.000</p>
+                </div>
+                <div class="price-row">
+                    <p>Biaya Penjelajah (10%)</p>
+                    <p class="price-value">Rp.9.600</p>
+                </div>
+                <div class="price-row">
+                    <p>Shipping Fee</p>
+                    <p class="price-value">Rp.1.000</p>
+                </div>
+                <div class="total-row price-row">
+                    <p>Total Payable</p>
+                    <p class="price-value total-price">Rp.106.600</p>
+                </div>
+            </div>
+
+            <a href="Payment.html" class="proceed-btn">Proceed to Payment</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/Logo.png" alt="Titipkeun U Logo">
+                    TITIPKEUN-U
+                </div>
+                <p class="footer-info">Connecting buyers with jastippers worldwide.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p>123 Jastip Street, Jastip City, 12345</p>
+                <p>Email: <a href="mailto:info@jastippin.com">info@jastippin.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 TITIPKEUN-U. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
