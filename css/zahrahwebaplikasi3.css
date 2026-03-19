@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo span {
+  font-weight: 700;
+  color: #e63946;
+  font-size: 18px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-login input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-btn, .login-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Community Section */
+.community-container {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.community-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.jastip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.jastip-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 25px;
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.jastip-card:hover {
+  transform: translateY(-5px);
+}
+
+.jastip-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.jastip-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.jastip-card button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.jastip-card.active {
+  border: 2px solid #e63946;
+}
+
+/* Start Button */
+.create-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.create-btn:hover {
+  background: #c92d3b;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  padding: 40px;
+  margin-top: 60px;
+  border-top: 1px solid #eee;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .community-container {
+    padding: 40px 20px;
+  }
+
+  .jastip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    .jastip-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
